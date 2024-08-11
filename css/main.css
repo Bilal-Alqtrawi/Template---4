@@ -1,3 +1,12 @@
+:root {
+  --blue-color: #0075ff;
+  --blue-alt-color: #0d69d5;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #f44336;
+  --gray-color: #888;
+  --main-duration: .3s;
+}
 * {
   box-sizing: border-box;
 }
@@ -61,11 +70,11 @@ body {
   }
 }
 .sidebar ul li a {
-  transition: 0.3s;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
+  transition: var(--main-duration);
+  -webkit-transition: var(--main-duration);
+  -moz-transition: var(--main-duration);
+  -ms-transition: var(--main-duration);
+  -o-transition: var(--main-duration);
 }
 .sidebar a:hover:not(.active),
 .sidebar a.active {
@@ -87,3 +96,57 @@ body {
   }
 }
 /* End Sidebar */
+/* Start Content */
+.content {
+  overflow: hidden;
+}
+.head .search::before {
+  content: "\f002";
+  font-family: var(--fa-style-family-classic); /*"Font Awesome 6 Free"*/
+  font-weight: 900;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  font-size: 14px;
+  color: var(--gray-color);
+}
+.head .search input {
+  font-size: 13px;
+  padding-left: 30px;
+  width: 160px;
+  transition: width var(--main-duration);
+  -webkit-transition: width var(--main-duration);
+  -moz-transition: width var(--main-duration);
+  -ms-transition: width var(--main-duration);
+  -o-transition: width var(--main-duration);
+}
+.head .search input:focus {
+  width: 200px;
+}
+.head .search input:focus::placeholder {
+  opacity: 0;
+}
+.head .icons .notification:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: var(--red-color);
+  top: -8px;
+  right: -5px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.head img {
+  width: 32px;
+  height: 32px;
+}
+/* End Content */
