@@ -336,7 +336,7 @@
   align-items: center;
 }
 .btn-shape {
-  display: block;
+  /* display: block; */
   padding: 4px 10px;
   border-radius: 6px;
   -webkit-border-radius: 6px;
