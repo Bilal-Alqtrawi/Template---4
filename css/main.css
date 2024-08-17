@@ -1030,7 +1030,7 @@ body {
 }
 @media (max-width: 767px) {
   .courses-page {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: minmax(200px, 1fr);
     gap: 10px;
     margin: 10px;
   }
@@ -1070,6 +1070,53 @@ body {
   z-index: 10;
 }
 /* End Courses Page */
+/* Start Friends Page */
+.friends-page {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+@media (max-width: 767px) {
+  .friends-page {
+    grid-template-columns:minmax(200px, 1fr);
+    gap: 10px;
+    margin: 10px;
+  }
+}
+.friends-page .friend .contact {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.friends-page .friend .contact i {
+  color: #666;
+  font-size: 13px;
+  padding: 10px;
+  cursor: pointer;
+  transition: var(--main-duration);
+  -webkit-transition: var(--main-duration);
+  -moz-transition: var(--main-duration);
+  -ms-transition: var(--main-duration);
+  -o-transition: var(--main-duration);
+}
+.friends-page .friend .contact i:hover {
+  background-color: var(--blue-color);
+  color: white;
+}
+.friends-page .friend .icons {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+.friends-page .friend .vip {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  font-size: 40px;
+  opacity: 0.2;
+}
+/* End Friends Page */
 /* Start Animation */
 @keyframes change-color {
   from {
