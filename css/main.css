@@ -24,6 +24,7 @@ a {
 ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 ::-webkit-scrollbar {
   width: 15px;
@@ -1211,6 +1212,84 @@ body {
   border-top: 1px solid #eee;
 }
 /* End Files Page */
+/* Start Plans Page */
+.plans-page {
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 20px;
+}
+@media (max-width: 767px) {
+  .plans-page {
+    grid-template-columns: minmax(250px, 1fr);
+    margin: 10px;
+    gap: 10px;
+  }
+}
+.plans-page .plan .top {
+  border: 3px solid white;
+  outline: 3px solid transparent;
+}
+.plans-page .plan.green .top {
+  outline-color: var(--green-color);
+}
+.plans-page .plan.blue .top {
+  outline-color: var(--blue-color);
+}
+.plans-page .plan.orange .top {
+  outline-color: var(--orange-color);
+}
+.plans-page .plan .top h2 {
+  letter-spacing: -1px;
+}
+.plans-page .plan .top .price {
+  font-size: 40px;
+}
+.plans-page .plan .top .price span {
+  left: -20px;
+  top: 0;
+}
+.plans-page .plan ul li {
+  position: relative;
+  border-bottom: 1px solid #eee;
+}
+.plans-page .plan ul li .yes {
+  color: var(--green-color);
+}
+.plans-page .plan ul li i:not(.yes,.help) {
+  color: var(--red-color);
+}
+.plans-page .plan ul li i:first-child {
+  font-size: 18px;
+  margin-right: 5px;
+}
+.plans-page .plan ul li .help {
+  color: var(--grey-color);
+  margin-left: auto;
+  cursor: pointer;
+}
+.plans-page .plan ul li .tooltip {
+  background-color: #333;
+  color: white;
+  font-size: 13px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  position: absolute;
+  right: -20px;
+  top: -15px;
+  transition: var(--main-duration);
+  -webkit-transition: var(--main-duration);
+  -moz-transition: var(--main-duration);
+  -ms-transition: var(--main-duration);
+  -o-transition: var(--main-duration);
+  z-index: -1;
+}
+.plans-page .plan ul li .help:hover + .tooltip {
+  z-index: 1;
+}
+/* End Plans Page */
 /* Start Animation */
 @keyframes change-color {
   from {
